@@ -14,7 +14,7 @@ namespace WebApiAvzag.Controllers
         {
             new Challenge
             {
-                Passage = "Дзул ма мын рат…",
+                Passage = "Дон ма мын рат…",
                 Question = "Уый фанды…",
                 Choices = new List<string> { "дзурын", "назын", "харын" },
                 CorrectIndex = 2,
