@@ -15,15 +15,17 @@ namespace WebApiAvzag.Controllers
             new Challenge
             {
                 Passage = "Дон ма мын рат…",
-                Question = "Уый фанды…",
+                Promt = "Уый фанды…",
                 Choices = new List<string> { "дзурын", "назын", "харын" },
                 CorrectIndex = 2,
-                Type = "readComprehension"
+                TTS = "https://drive.google.com/file/d/1n5psZk2XnbbxHfgLu7uAspfud97UnbYh/view?usp=sharing",
+                Type = "readComprehension",
+                Options = new List<QuestionOptions>{new QuestionOptions("дзурын", "https://drive.google.com/uc?export=download&id=1n5psZk2XnbbxHfgLu7uAspfud97UnbYh"), new QuestionOptions("назын", "https://drive.google.com/uc?export=download&id=1n5psZk2XnbbxHfgLu7uAspfud97UnbYh"), new QuestionOptions("харын", "https://drive.google.com/uc?export=download&id=1n5psZk2XnbbxHfgLu7uAspfud97UnbYh") }
             },
             new Challenge
             {
                 Passage = "Hallo. Wasser, bitte.",
-                Question = "What does he want?",
+                Promt = "What does he want?",
                 Choices = new List<string> { "Food", "Water", "Coffee" },
                 CorrectIndex = 1,
                 Type = "readComprehension"
@@ -31,24 +33,25 @@ namespace WebApiAvzag.Controllers
             new Challenge
             {
                 Passage = "Ich trinke Kaffee.",
-                Question = "What is he doing?",
+                Promt = "What is he doing?",
                 Choices = new List<string> { "Eating", "Drinking", "Sleeping" },
                 CorrectIndex = 1,
                 Type = "readComprehension"
             },
             new Challenge
             {
-                Question = "Wie sagt man 'hello' auf Deutsch?",
+                Promt = "Wie sagt man 'hello' auf Deutsch?",
                 Choices = new List<string> { "Auf Wiedersehen", "Danke", "Hallo", "Bitte" },
                 CorrectIndex = 2,
                 Type = "select"
             },
             new Challenge
             {
-                Question = "Wie sagt man 'thank you' auf Deutsch?",
+                Promt = "Wie sagt man 'thank you' auf Deutsch?",
                 Choices = new List<string> { "Hallo", "Bitte", "Danke", "Tschüss" },
                 CorrectIndex = 2,
-                Type = "select"
+                Type = "select",
+                Options = new List<QuestionOptions>{new QuestionOptions("sd", "SDs")}
             }
         };
 
