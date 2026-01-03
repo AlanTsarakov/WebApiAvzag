@@ -1,4 +1,4 @@
-﻿namespace WebApiAvzag.Models
+﻿namespace WebApiAvzag.Models.Questions
 {
     public class Challenge
     {
@@ -6,8 +6,7 @@
         public List<Token> PassageTokens { get; set; } = new();
         public string Promt { get; set; } = "";
         public List<Token> QuestionTokens { get; set; } = new();
-        public List<string> Choices { get; set; } = new();
-        public List<QuestionOptions> Options { get; set; } = new();
+        public List<QuestionOptions> Choices { get; set; } = new();
         public int CorrectIndex { get; set; }
         public string TTS { get; set; } = "";
         public string Type { get; set; } = "";

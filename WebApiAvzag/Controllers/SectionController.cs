@@ -16,7 +16,7 @@ namespace WebApiAvzag.Controllers
                 Section = new Section
                 {
                     Name = "Раздел 1",
-                    TotalChaptersInUnit = 9,
+                    TotalChaptersInUnit = 7,
                     TotalUnitsInSection = 1,
                     Units = GenerateUnits(sectionId)
                 }
@@ -35,15 +35,13 @@ namespace WebApiAvzag.Controllers
                     Description = "Безовые предложения",
                     Chapters = new List<string>
                     {
-                        "Form basic sentences",
-                        "Practice greetings",
-                        "Introduce yourself",
-                        "Ask basic questions",
-                        "Use common phrases",
-                        "Describe objects",
-                        "Talk about family",
-                        "Discuss hobbies",
-                        "Order food and drinks"
+                        "Базовые предложения",
+                        "Практика приветсвий",
+                        "Практика приветсвий",
+                        "Практика приветсвий",
+                        "Практика приветсвий",
+                        "Практика приветсвий",
+                        "Практика приветсвий"
                     }
                 }
             };

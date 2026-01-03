@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using WebApiAvzag.Models;
+using WebApiAvzag.Models.Questions;
 
 namespace WebApiAvzag.Controllers
 {
@@ -8,64 +8,87 @@ namespace WebApiAvzag.Controllers
     [Route("api/[controller]")]
     public class QuestionController : ControllerBase
     {
+        //section -> unit -> chapter -> lesson -> challenge
 
-        // Данные для упражнений на немецком
-        private static readonly List<Challenge> _germanChallenges = new()
-        {
-            new Challenge
-            {
-                Passage = "Дон ма мын рат…",
-                Promt = "Уый фанды…",
-                Choices = new List<string> { "дзурын", "назын", "харын" },
-                CorrectIndex = 2,
-                TTS = "https://drive.google.com/file/d/1n5psZk2XnbbxHfgLu7uAspfud97UnbYh/view?usp=sharing",
-                Type = "readComprehension",
-                Options = new List<QuestionOptions>{new QuestionOptions("дзурын", "https://drive.google.com/uc?export=download&id=1n5psZk2XnbbxHfgLu7uAspfud97UnbYh"), new QuestionOptions("назын", "https://drive.google.com/uc?export=download&id=1n5psZk2XnbbxHfgLu7uAspfud97UnbYh"), new QuestionOptions("харын", "https://drive.google.com/uc?export=download&id=1n5psZk2XnbbxHfgLu7uAspfud97UnbYh") }
-            },
-            new Challenge
-            {
-                Passage = "Hallo. Wasser, bitte.",
-                Promt = "What does he want?",
-                Choices = new List<string> { "Food", "Water", "Coffee" },
-                CorrectIndex = 1,
-                Type = "readComprehension"
-            },
-            new Challenge
-            {
-                Passage = "Ich trinke Kaffee.",
-                Promt = "What is he doing?",
-                Choices = new List<string> { "Eating", "Drinking", "Sleeping" },
-                CorrectIndex = 1,
-                Type = "readComprehension"
-            },
-            new Challenge
-            {
-                Promt = "Wie sagt man 'hello' auf Deutsch?",
-                Choices = new List<string> { "Auf Wiedersehen", "Danke", "Hallo", "Bitte" },
-                CorrectIndex = 2,
-                Type = "select"
-            },
-            new Challenge
-            {
-                Promt = "Wie sagt man 'thank you' auf Deutsch?",
-                Choices = new List<string> { "Hallo", "Bitte", "Danke", "Tschüss" },
-                CorrectIndex = 2,
-                Type = "select",
-                Options = new List<QuestionOptions>{new QuestionOptions("sd", "SDs")}
-            }
-        };
+        private Chapter chapter1 = new Chapter("ds",
+            new List<Lesson>() {
+                new Lesson(new Challenge()
+                    {
+                        Passage = "Дон ма мын рат…",
+                        Promt = "Что он хочет?",
+                        CorrectIndex = 1,
+                        TTS = "../assets/audio/lesson_1_1.mp3",
+                        Type = "readComprehension",
+                        Choices = new List<QuestionOptions>{new QuestionOptions("дзурын", "../assets/audio/lesson_1_1_1.mp3"), new QuestionOptions("назын", "../assets/audio/lesson_1_1_2.mp3"), new QuestionOptions("харын", "../assets/audio/lesson_1_1_3.mp3") },
+                    },
+                    new Challenge()
+                    {
+                        Passage = "Айда ныхас аканам",
+                        Promt = "Что он хочет?",
+                        Choices = new List<QuestionOptions>{new QuestionOptions("дзурын", "../assets/audio/lesson_1_1_1.mp3"), new QuestionOptions("назын", "../assets/audio/lesson_1_1_2.mp3"), new QuestionOptions("харын", "../assets/audio/lesson_1_1_3.mp3") },
+                        CorrectIndex = 0,
+                        TTS = "../assets/audio/lesson_1_3.mp3",
+                        Type = "readComprehension"
+                    },
+                    new Challenge() 
+                    {
+                        Passage = "Дзул ма мын рат…",
+                        Promt = "Что он хочет?",
+                        Choices = new List<QuestionOptions>{new QuestionOptions("дзурын", "../assets/audio/lesson_1_1_1.mp3"), new QuestionOptions("назын", "../assets/audio/lesson_1_1_2.mp3"), new QuestionOptions("харын", "../assets/audio/lesson_1_1_3.mp3") },
+                        CorrectIndex = 2,
+                        TTS = "../assets/audio/lesson_1_2.mp3",
+                        Type = "readComprehension"
+                    },
+                    new Challenge()
+                    {
+                        Passage = "Ныхас",
+                        Promt = "Переведите:",
+                        CorrectIndex = 1,
+                        TTS = "../assets/audio/lesson_1_4.mp3",
+                        Type = "readComprehension",
+                        Choices = new List<QuestionOptions>{new QuestionOptions("разговор", "../assets/audio/lesson_1_1_1.mp3"), new QuestionOptions("привет", "../assets/audio/lesson_1_1_2.mp3"), new QuestionOptions("пчела", "../assets/audio/lesson_1_1_3.mp3") },
+                    }),
+                new Lesson(new Challenge()
+                    {
+                        Passage = "Ныхас",
+                        Promt = "Переведите:",
+                        CorrectIndex = 0,
+                        TTS = "../assets/audio/lesson_1_4.mp3",
+                        Type = "readComprehension",
+                        Choices = new List<QuestionOptions>{new QuestionOptions("разговор", "../assets/audio/lesson_1_1_1.mp3"), new QuestionOptions("привет", "../assets/audio/lesson_1_1_2.mp3"), new QuestionOptions("пчела", "../assets/audio/lesson_1_1_3.mp3") },
+                    },new Challenge()
+                    {
+                        Passage = "2Дон ма мын рат…",
+                        Promt = "Что он хочет?",
+                        CorrectIndex = 1,
+                        TTS = "../assets/audio/lesson_1_1.mp3",
+                        Type = "readComprehension",
+                        Choices = new List<QuestionOptions>{new QuestionOptions("дзурын", "../assets/audio/lesson_1_1_1.mp3"), new QuestionOptions("назын", "../assets/audio/lesson_1_1_2.mp3"), new QuestionOptions("харын", "../assets/audio/lesson_1_1_3.mp3") },
+                    },new Challenge()
+                    {
+                        Passage = "2Дон ма мын рат…",
+                        Promt = "Что он хочет?",
+                        CorrectIndex = 1,
+                        TTS = "../assets/audio/lesson_1_1.mp3",
+                        Type = "readComprehension",
+                        Choices = new List<QuestionOptions>{new QuestionOptions("дзурын", "../assets/audio/lesson_1_1_1.mp3"), new QuestionOptions("назын", "../assets/audio/lesson_1_1_2.mp3"), new QuestionOptions("харын", "../assets/audio/lesson_1_1_3.mp3") },
+                    },new Challenge()
+                    {
+                        Passage = "2Дон ма мын рат…",
+                        Promt = "Что он хочет?",
+                        CorrectIndex = 1,
+                        TTS = "../assets/audio/lesson_1_1.mp3",
+                        Type = "readComprehension",
+                        Choices = new List<QuestionOptions>{new QuestionOptions("дзурын", "../assets/audio/lesson_1_1_1.mp3"), new QuestionOptions("назын", "../assets/audio/lesson_1_1_2.mp3"), new QuestionOptions("харын", "../assets/audio/lesson_1_1_3.mp3") },
+                    }) 
+            });
 
         [HttpGet(Name = "question")]
-        public ActionResult Index()
+        public ActionResult Index(int sectionId, int chapter, int lesson)
         {
-            var randomChallenge = _germanChallenges[0];
-            var response = new ChallengeResponse
-            {
-                Challenges = new List<Challenge> { randomChallenge }
-            };
-            return Ok(response);
+            return Ok(chapter1.Lessons[lesson-1].Challenges);
         }
 
-        
+
     }
 }

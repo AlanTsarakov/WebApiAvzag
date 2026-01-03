@@ -1,4 +1,4 @@
-﻿namespace WebApiAvzag.Models
+﻿namespace WebApiAvzag.Models.Questions
 {
     public class QuestionOptions
     {
