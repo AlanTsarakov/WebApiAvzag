@@ -3,7 +3,7 @@
 ASP.NET Core API
 Swagger/OpenAPI 3.0
 
-API Endpoints
+API Endpoints:
 1. GET /api/FAQ
 Возвращает часто задаваемые вопросы, сгруппированные по темам.
 2. GET /api/Question
@@ -12,3 +12,7 @@ API Endpoints
 sectionId (обязательный) - ID раздела
 chapter (обязательный) - номер главы
 lesson (обязательный) - номер урока
+3. GET /api/Section
+Получает структуру раздела курса.
+Параметры:
+sectionId (обязательный) - ID раздела
