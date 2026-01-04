@@ -9,6 +9,10 @@ namespace WebApiAvzag
 
             builder.WebHost.UseKestrel();
 
+            if (builder.Environment.IsProduction())
+            {
+                builder.WebHost.UseUrls("http://0.0.0.0:5000");
+            }
 
             builder.Logging.ClearProviders();
             builder.Logging.AddConsole();  // Добавляем вывод в консоль
