@@ -11,7 +11,10 @@ namespace WebApiAvzag
 
             if (builder.Environment.IsProduction())
             {
-                builder.WebHost.UseUrls("http://0.0.0.0:5000");
+                builder.WebHost.ConfigureKestrel(options =>
+                {
+                    options.ListenAnyIP(5000);
+                });
             }
 
             builder.Logging.ClearProviders();
