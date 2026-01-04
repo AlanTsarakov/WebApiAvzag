@@ -80,7 +80,74 @@ namespace WebApiAvzag.Controllers
                         TTS = "../assets/audio/lesson_1_1.mp3",
                         Type = "readComprehension",
                         Choices = new List<QuestionOptions>{new QuestionOptions("дзурын", "../assets/audio/lesson_1_1_1.mp3"), new QuestionOptions("назын", "../assets/audio/lesson_1_1_2.mp3"), new QuestionOptions("харын", "../assets/audio/lesson_1_1_3.mp3") },
-                    }) 
+                    }),
+                new Lesson(new Challenge()
+                    {
+                        Passage = "Ныхас",
+                        Promt = "Переведите:",
+                        CorrectIndex = 0,
+                        TTS = "../assets/audio/lesson_1_4.mp3",
+                        Type = "readComprehension",
+                        Choices = new List<QuestionOptions>{new QuestionOptions("разговор", "../assets/audio/lesson_1_1_1.mp3"), new QuestionOptions("привет", "../assets/audio/lesson_1_1_2.mp3"), new QuestionOptions("пчела", "../assets/audio/lesson_1_1_3.mp3") },
+                    },new Challenge()
+                    {
+                        Passage = "2Дон ма мын рат…",
+                        Promt = "Что он хочет?",
+                        CorrectIndex = 1,
+                        TTS = "../assets/audio/lesson_1_1.mp3",
+                        Type = "readComprehension",
+                        Choices = new List<QuestionOptions>{new QuestionOptions("дзурын", "../assets/audio/lesson_1_1_1.mp3"), new QuestionOptions("назын", "../assets/audio/lesson_1_1_2.mp3"), new QuestionOptions("харын", "../assets/audio/lesson_1_1_3.mp3") },
+                    },new Challenge()
+                    {
+                        Passage = "2Дон ма мын рат…",
+                        Promt = "Что он хочет?",
+                        CorrectIndex = 1,
+                        TTS = "../assets/audio/lesson_1_1.mp3",
+                        Type = "readComprehension",
+                        Choices = new List<QuestionOptions>{new QuestionOptions("дзурын", "../assets/audio/lesson_1_1_1.mp3"), new QuestionOptions("назын", "../assets/audio/lesson_1_1_2.mp3"), new QuestionOptions("харын", "../assets/audio/lesson_1_1_3.mp3") },
+                    },new Challenge()
+                    {
+                        Passage = "2Дон ма мын рат…",
+                        Promt = "Что он хочет?",
+                        CorrectIndex = 1,
+                        TTS = "../assets/audio/lesson_1_1.mp3",
+                        Type = "readComprehension",
+                        Choices = new List<QuestionOptions>{new QuestionOptions("дзурын", "../assets/audio/lesson_1_1_1.mp3"), new QuestionOptions("назын", "../assets/audio/lesson_1_1_2.mp3"), new QuestionOptions("харын", "../assets/audio/lesson_1_1_3.mp3") },
+                    }),
+                new Lesson(new Challenge()
+                    {
+                        Passage = "Ныхас",
+                        Promt = "Переведите:",
+                        CorrectIndex = 0,
+                        TTS = "../assets/audio/lesson_1_4.mp3",
+                        Type = "readComprehension",
+                        Choices = new List<QuestionOptions>{new QuestionOptions("разговор", "../assets/audio/lesson_1_1_1.mp3"), new QuestionOptions("привет", "../assets/audio/lesson_1_1_2.mp3"), new QuestionOptions("пчела", "../assets/audio/lesson_1_1_3.mp3") },
+                    },new Challenge()
+                    {
+                        Passage = "2Дон ма мын рат…",
+                        Promt = "Что он хочет?",
+                        CorrectIndex = 1,
+                        TTS = "../assets/audio/lesson_1_1.mp3",
+                        Type = "readComprehension",
+                        Choices = new List<QuestionOptions>{new QuestionOptions("дзурын", "../assets/audio/lesson_1_1_1.mp3"), new QuestionOptions("назын", "../assets/audio/lesson_1_1_2.mp3"), new QuestionOptions("харын", "../assets/audio/lesson_1_1_3.mp3") },
+                    },new Challenge()
+                    {
+                        Passage = "2Дон ма мын рат…",
+                        Promt = "Что он хочет?",
+                        CorrectIndex = 1,
+                        TTS = "../assets/audio/lesson_1_1.mp3",
+                        Type = "readComprehension",
+                        Choices = new List<QuestionOptions>{new QuestionOptions("дзурын", "../assets/audio/lesson_1_1_1.mp3"), new QuestionOptions("назын", "../assets/audio/lesson_1_1_2.mp3"), new QuestionOptions("харын", "../assets/audio/lesson_1_1_3.mp3") },
+                    },new Challenge()
+                    {
+                        Passage = "2Дон ма мын рат…",
+                        Promt = "Что он хочет?",
+                        CorrectIndex = 1,
+                        TTS = "../assets/audio/lesson_1_1.mp3",
+                        Type = "readComprehension",
+                        Choices = new List<QuestionOptions>{new QuestionOptions("дзурын", "../assets/audio/lesson_1_1_1.mp3"), new QuestionOptions("назын", "../assets/audio/lesson_1_1_2.mp3"), new QuestionOptions("харын", "../assets/audio/lesson_1_1_3.mp3") },
+                    })
+
             });
 
         [HttpGet(Name = "question")]
