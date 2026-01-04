@@ -9,13 +9,6 @@ namespace WebApiAvzag
 
             builder.WebHost.UseKestrel();
 
-            if (builder.Environment.IsProduction())
-            {
-                builder.WebHost.ConfigureKestrel(options =>
-                {
-                    options.ListenAnyIP(8080);
-                });
-            }
 
             builder.Logging.ClearProviders();
             builder.Logging.AddConsole();  // Добавляем вывод в консоль
