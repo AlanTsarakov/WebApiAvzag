@@ -2,6 +2,6 @@
 {
     public class CategoryJson
     {
-        public List<QuestionItem> questions { get; set; }
+        public List<QuestionItem>? Questions { get; set; }
     }
 }
