@@ -8,6 +8,11 @@
             TTS = tTS;
         }
 
+        public QuestionOptions(string text)
+        {
+            Text = text;
+        }
+
         public string Text { set; get; }
         public string TTS { set; get; }
     }
